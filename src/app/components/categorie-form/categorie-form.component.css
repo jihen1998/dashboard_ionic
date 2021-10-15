@@ -1,0 +1,20 @@
+*{
+  font-weight: lighter;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+mat-chip{
+  height: 250px;
+}
+
+Button{
+  width: 100%;
+
+}
+
+.button-ing{
+
+}

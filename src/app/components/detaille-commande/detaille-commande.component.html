@@ -1,0 +1,195 @@
+<div class="container">
+  <div class="col-lg-12">
+    <button mat-button class="pull-right" (click)="close()">
+      <mat-icon>printer set</mat-icon>
+    </button>
+  </div>
+  <div class="row centre">
+    <div class="col-lg-12">
+      <p style="font-family: 'Courier New'; font-size: 12pt;"> {{restau.nom_restaurant}}</p>
+    </div>
+    <div class="col-lg-12">
+      <p style="font-family: 'Courier New'; font-size: 10pt;"> {{restau.address}}</p>
+    </div>
+    <div class="col-lg-12">
+      <p style="font-family: 'Courier New'; font-size: 10pt;"> Tel: &nbsp;{{restau.tel}}</p>
+      <hr>
+    </div>
+    <div class="row centre">
+      <div class="col-lg-12">
+        ____________________Adresse livraison____________________
+      </div>
+      <div class="col-lg-12" *ngIf="data.user">
+        <p style="font-family: 'Courier New; font-size: 12pt;">
+          {{data.user.nom}} &nbsp; {{data.user.prenom}}
+        </p>
+      </div>
+      <div class="col-lg-12" *ngIf="data.livraison">
+        <p style="font-family: 'Courier New; font-size: 12pt;">
+          {{data.livraison_address}}
+        </p>
+      </div>
+      <div class="col-lg-12" *ngIf="!data.livraison">
+        <h3>Click and Collect</h3>
+      </div>
+      <div class="col-lg-12" *ngIf="data.user">
+        <p style="font-family: 'Courier New'; font-size: 12pt;">Tel:
+          &nbsp;{{data.user.numero_de_telephone}}</p>
+        <hr>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <p style="font-family: 'Courier New'; font-size: 14pt;">TICKET N°: &nbsp; {{id}}</p>
+    </div>
+    <div class="col-lg-12">
+      <p style="font-family: 'Courier New'; font-size: 12pt;">{{data.created_at}}</p>
+    </div>
+    <div class="col-lg-12">
+      <p style="font-family: 'Courier New'; font-size: 12pt;" *ngIf="data.livraison">
+        STANDARD: &nbsp;
+        <span style="font-weight: bold"> (LIVRAISON)</span>
+      </p>
+      <p style="font-family: 'Courier New'; font-size: 12pt;" *ngIf="!data.livraison">
+        STANDARD: &nbsp;
+        <span style="font-weight: bold"> (CLICK AND COLLECT)</span>
+      </p>
+    </div>
+    <div class="col-lg-12">
+      <p style="font-family: 'Courier New'; font-size: 12pt;" *ngIf="data.paiement_modality != null">
+
+      </p>
+    </div>
+    <div class="col-lg-12" *ngIf="data.user">
+      <p style="font-family: 'Courier New'; font-size: 14pt;">Client: &nbsp; {{data.user.nom}}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <p style="font-family: 'Courier New'; font-size: 14pt;" class="centre">Liste des articles </p>
+    </div>
+    <div class="col-lg-12" *ngFor=" let plat of data.requested_plat">
+      <div class="row">
+        <div class="col-lg-10">
+          <p style="font-family: 'Courier New'; font-size: 14pt;">
+            <mat-icon>subdirectory_arrow_right</mat-icon>
+            &nbsp;
+            {{plat.nom}}
+          </p>
+        </div>
+        <div class="col-lg-2">
+          <p style="font-family: 'Courier New'; font-size: 12pt;">
+            {{plat.prix | currency: 'EUR': true}}
+          </p>
+        </div>
+        <div class="col-lg-10" style="margin-left: 30px;">
+          <div *ngFor="let custom of plat.customs">
+            <p style="font-family: 'Courier New'; font-size: 14pt;" *ngFor="let ing of custom.ingredients">
+              <!--lazem njib el quantité-->
+              <mat-icon>arrow_right_alt</mat-icon>
+              {{ing.nom}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-------------------------offre---------------------->
+    <div class="col-lg-12" *ngFor=" let offre of listeOffres">
+      <div class="row">
+        <div class="col-lg-10">
+          <p style="font-family: 'Courier New'; font-size: 14pt; font-weight: bold">
+            <mat-icon>subdirectory_arrow_right</mat-icon>
+            &nbsp;
+            {{offre.nom}}
+          </p>
+        </div>
+        <div class="col-lg-2">
+          <p style="font-family: 'Courier New'; font-size: 12pt;">
+            {{offre.prix | currency: 'EUR': true}}
+          </p>
+        </div>
+        <div class="col-lg-12">
+          <div *ngFor="let plat of offre.requested_plats">
+            <div class="row">
+              <div class="col-lg-12">
+                <p style="font-family: 'Courier New'; font-size: 12pt;">
+                  {{plat.nom}}
+                </p>
+              </div>
+              <div class="col-lg-10" style="margin-left: 30px;">
+                <div *ngFor="let custom of plat.customs">
+                  <p style="font-family: 'Courier New'; font-size: 14pt;"
+                     *ngFor="let ing of custom.ingredients">
+                    <!--lazem njib el quantité-->
+                    <mat-icon>arrow_right_alt</mat-icon>
+                    {{ing.nom}}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-10">
+      <p style="font-family: 'Courier New'; font-size: 12pt;">
+        TOTAL DES REMISES:
+      </p>
+    </div>
+    <div class="col-lg-2">
+      <p style="font-family: 'Courier New'; font-size: 12pt;">
+        0.00 €
+      </p>
+    </div>
+    <div class="col-lg-10">
+      <p style="font-family: 'Courier New'; font-size: 12pt;">
+        FRAIS DE LA LIVRAISON:
+      </p>
+    </div>
+    <div class="col-lg-2">
+      <p style="font-family: 'Courier New'; font-size: 12pt;" *ngIf="data.livraison">
+        {{restau.prixlivraison | currency: 'EUR': true}}
+      </p>
+      <p style="font-family: 'Courier New'; font-size: 12pt;" *ngIf="!data.livraison">
+        0.00 €
+      </p>
+    </div>
+    <div class="col-lg-10">
+      <p style="font-family: 'Courier New'; font-size: 12pt;">
+        TOTAL DU TICKET:
+      </p>
+    </div>
+    <div class="col-lg-2">
+      <p style="font-family: 'Courier New'; font-size: 12pt;" *ngIf="data.livraison">
+        {{data.prix_total - restau.prixlivraison | currency: 'EUR': true}}
+      </p>
+      <p style="font-family: 'Courier New'; font-size: 12pt;" *ngIf="!data.livraison">
+        {{data.prix_total | currency: 'EUR': true}}
+      </p>
+    </div>
+    <div class="col-lg-10">
+      <p style="font-family: 'Courier New'; font-size: 14pt; font-weight: bold">
+        A PAYER:
+      </p>
+    </div>
+    <div class="col-lg-2">
+      <p style="font-family: 'Courier New'; font-size: 14pt; font-weight: bold">
+        {{data.prix_total | currency: 'EUR': true}}
+      </p>
+    </div>
+    <div class="col-lg-12">
+      <hr>
+    </div>
+  </div>
+  <div class="col-lg-12" style="text-align: center;">
+    <p style="font-family: 'Courier New'; font-size: 12pt">
+      Toute l'équipe vous remercie de votre visite
+    </p>
+  </div>
+  <div class="col-lg-12" style="text-align: center;">
+    <p style="font-family: 'Courier New'; font-size: 12pt">
+      Siret: {{restau.num_siret}}
+    </p>
+  </div>
+</div>

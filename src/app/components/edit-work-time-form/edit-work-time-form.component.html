@@ -1,0 +1,35 @@
+
+<h1 class="text_align-center" style="margin-left: 20%">temps de travaille</h1>
+<form #f="ngForm"  (ngSubmit)="onsubmit(f)" style="margin: 0; padding: 0;">
+
+  <div class="example-container">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Debut</mat-label>
+      <input matInput [(ngModel)]="data.date"  #start="ngModel" name="start" ngModel  [matDatepicker]="picker">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker touchUi #picker></mat-datepicker>
+    </mat-form-field>
+    <ngb-timepicker [(ngModel)]="timestart" #starttime="ngModel" ngModel name="starttime"></ngb-timepicker>
+
+    <br>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Fin</mat-label>
+      <input matInput [(ngModel)]="dateend"  #end="ngModel" name="end" ngModel  [matDatepicker]="picker1">
+      <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+      <mat-datepicker touchUi #picker1></mat-datepicker>
+    </mat-form-field>
+    <ngb-timepicker [(ngModel)]="timeend" #endtime="ngModel" ngModel name="endtime"></ngb-timepicker>
+
+    <br>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Férié</mat-label>
+      <input matInput [(ngModel)]="dateholiday"  #holiday="ngModel" name="holiday" ngModel  [matDatepicker]="picker2">
+      <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+      <mat-datepicker touchUi #picker2></mat-datepicker>
+    </mat-form-field>
+
+    <button mat-stroked-button class="ml-3" style="background-color: #b0bec5" [disabled]="f.invalid">envoyer</button>
+    <button mat-stroked-button type="reset" class="ml-3" style="background-color: #b0bec5" >vider le formulaire</button>
+    <button type="button" mat-stroked-button class="ml-3" style="background-color: #b0bec5" (click)="onclose(f)" >annuler/terminer</button>
+  </div>
+</form>

@@ -1,0 +1,111 @@
+<div>
+  <button mat-raised-button (click)="onCreate()" style="margin-right: 1%">
+    <mat-icon>add</mat-icon> Ajouter restaurant
+  </button>
+  <mat-form-field color="accent">
+    <input matInput (keyup)="applyFilter($event)" placeholder="Filter" #input>
+  </mat-form-field>
+</div>
+<div class="mat-elevation-z8">
+  <table mat-table matSort [dataSource]="dataSource">
+
+    <!-- Nom Column -->
+    <ng-container matColumnDef="nom">
+      <th mat-header-cell mat-sort-header *matHeaderCellDef> Nom</th>
+      <td mat-cell *matCellDef="let element"> {{element.nom_restaurant}} </td>
+    </ng-container>
+
+    <!-- logo Column -->
+    <ng-container matColumnDef="logo">
+      <th mat-header-cell mat-sort-header *matHeaderCellDef> logo</th>
+      <td mat-cell *matCellDef="let element"> <img src="https://www.api.msfood.msdigital34.fr/restaurant-backend/storage/app/public/{{element.logo}}" style="height: 50px; width: 50px; display: block; margin: 3%"> </td>
+    </ng-container>
+
+    <!-- Address Column -->
+    <ng-container matColumnDef="adresse">
+      <th mat-header-cell mat-sort-header *matHeaderCellDef> Adresse</th>
+      <td mat-cell *matCellDef="let element"> {{element.address}} </td>
+    </ng-container>
+
+    <!-- tel Column -->
+    <ng-container matColumnDef="tel">
+      <th mat-header-cell mat-sort-header *matHeaderCellDef> Tel</th>
+      <td mat-cell *matCellDef="let element"> 11111111 </td>
+    </ng-container>
+
+    <!-- stripe Column -->
+    <ng-container matColumnDef="Stripe">
+      <th mat-header-cell *matHeaderCellDef> Stripe</th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-raised-button (click)="stripe(element)">
+          <mat-icon>visibility</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <!-- paypal Column -->
+    <ng-container matColumnDef="paypal">
+      <th mat-header-cell *matHeaderCellDef> paypal</th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-raised-button (click)="paypal(element)">
+          <mat-icon>visibility</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <!-- num tva Column -->
+    <ng-container matColumnDef="num_tva">
+      <th mat-header-cell mat-sort-header *matHeaderCellDef> num tva</th>
+      <td mat-cell *matCellDef="let element"> {{element.numero_tva}} </td>
+    </ng-container>
+
+    <!-- num tva intercom Column -->
+    <ng-container matColumnDef="num_tva_intercom">
+      <th mat-header-cell mat-sort-header *matHeaderCellDef> num tva intercom</th>
+      <td mat-cell *matCellDef="let element"> {{element.num_tva_intercommunautaire}} </td>
+    </ng-container>
+
+    <!-- num siret Column -->
+    <ng-container matColumnDef="num_siret">
+      <th mat-header-cell mat-sort-header *matHeaderCellDef> num siret</th>
+      <td mat-cell *matCellDef="let element"> {{element.num_siret}} </td>
+    </ng-container>
+
+    <!-- num siren  Column -->
+    <ng-container matColumnDef="num_siren">
+      <th mat-header-cell mat-sort-header *matHeaderCellDef> num siren</th>
+      <td mat-cell *matCellDef="let element"> {{element.num_siren}} </td>
+    </ng-container>
+
+    <!-- edit Column -->
+    <ng-container matColumnDef="edit">
+      <th mat-header-cell *matHeaderCellDef> modifier</th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-raised-button color="primary" (click)="edit(element)">
+          <mat-icon>edit</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <!-- delete Column -->
+    <ng-container matColumnDef="delete">
+      <th mat-header-cell *matHeaderCellDef> supprimer</th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-raised-button color="warn" (click)="delete(element)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    <!-- Row shown when there is no matching data. -->
+    <tr class="mat-row" *matNoDataRow>
+      <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+    </tr>
+
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>

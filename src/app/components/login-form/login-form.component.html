@@ -1,0 +1,18 @@
+<div class="contenaire container-fluid">
+  <div class="login">
+    <div style="display: flex; justify-content: center; padding-bottom: 10px">
+      <img src="../../../assets/img/maria contina connect.png" height="130" width="130"/>
+    </div>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+      <input type="text" name="login" ngModel #login="ngModel" required>
+      <div class="alert-danger" *ngIf="login.invalid && login.errors.required && login.touched">insérez le login s.v.p
+      </div>
+      <input type="password" name="password" ngModel #password="ngModel" required>
+      <div class="alert-danger" *ngIf="password.invalid && password.errors.required && password.touched">insérez le mot
+        de passe s.v.p
+      </div>
+      <button type="submit" class="btn btn-primary btn-block btn-large" [disabled]="f.invalid">Se connecter</button>
+      <div class="alert-danger" *ngIf="f.submitted && isLoginFailed">Login failed: {{errorMessage}}</div>
+    </form>
+  </div>
+</div>

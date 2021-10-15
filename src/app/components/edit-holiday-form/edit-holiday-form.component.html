@@ -1,0 +1,11 @@
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Choisir une date</mat-label>
+    <input #d [(ngModel)]="date" matInput  [matDatepicker]="holiday" (dateChange)="getHolidayDate()">
+    <mat-datepicker-toggle  matSuffix [for]="holiday"></mat-datepicker-toggle>
+    <mat-datepicker touchUi #holiday></mat-datepicker>
+  </mat-form-field>
+
+
+<button mat-stroked-button class="ml-3" style="background-color: #b0bec5" (click)="submitHoliday()">envoyer</button>
+<button type="button" mat-stroked-button class="ml-3" style="background-color: #b0bec5" (click)="onclose()" >annuler/terminer</button>

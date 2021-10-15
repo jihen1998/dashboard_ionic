@@ -1,0 +1,23 @@
+.demo-table {
+  width: 100%;
+}
+
+mat-panel-title {
+  color: white;
+}
+
+table {
+  width: 100%;
+}
+
+.btn-schedule{
+  width: 100%;
+}
+
+.ferier{
+  background: white;
+  border-radius: 5px;
+  padding: 10px;
+  width: 99%;
+  margin: 1%;
+}

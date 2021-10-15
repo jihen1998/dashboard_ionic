@@ -1,0 +1,68 @@
+.stat_container {
+  padding: 10px;
+  margin-left: 15px;
+}
+
+.title-courbe{
+}
+
+.container-courbe{
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.stat-ca{
+  background: white;
+  padding: 20px;
+  max-width: 99%;
+  float: right;
+  border-radius: 5px;
+}
+.datepikerca{
+  z-index: 10;
+  float: right;
+  position: relative;
+  top: -15px;
+}
+.stat1 {
+  background-color: rgba(0, 130, 203, 0.18);
+  border: 1px solid #0082CB;
+  border-radius: 10px;
+  max-height: 450px;
+  padding: 3px;
+  width: 99%;
+
+}
+
+.stat2 {
+  background-color: rgba(255, 95, 0, 0.18);
+  border: 1px solid #FF5F00;
+  border-radius: 10px;
+  max-height: 200px;
+  padding: 3px;
+  width: 99%;
+  margin: auto;
+  margin-top: 15px;
+}
+
+.stat3 {
+  background-color: rgba(229, 6, 149, 0.18);
+  border: 1px solid #E50695;
+  border-radius: 10px;
+  max-height: 200px;
+  padding: 3px;
+  margin-top: 15px;
+  width: 99%;
+}
+
+.stat4 {
+  background-color: rgba(0, 0, 0, 0.18);
+  border: 1px solid #000;
+  border-radius: 10px;
+  max-height: 200px;
+  padding: 3px;
+  width: 99%;
+  margin-top: 15px;
+}
+

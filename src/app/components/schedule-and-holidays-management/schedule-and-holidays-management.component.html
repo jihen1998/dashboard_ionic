@@ -1,0 +1,258 @@
+<div style="background-color: whitesmoke;">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-6">
+       <div class="row ferier" >
+         <div class="col-lg-12">
+           <h1 style="text-align: center"> Les jours fériés</h1>
+           <hr>
+         </div>
+         <div class="col-lg-12 ferier">
+
+              <div class="row ">
+                <div class="col-lg-4" >
+                  <button
+
+                    [disabled]="!dataSource.data.length"
+                    (click)="submitHoliday()"
+                    class="btn btn-success btn-schedule">
+                    Envoyer
+                  </button>
+                </div>
+                <div class="col-lg-4" >
+                    <button
+
+                      (click)="addHoliday()"
+                      class="btn btn-primary btn-schedule">
+                      Ajouter Férié
+                    </button>
+                </div>
+                <div class="col-lg-4" >
+                    <button
+
+                      [disabled]="!dataSource.data.length"
+                      (click)="removeData()"
+                      class="btn btn-warning btn-schedule">
+                      Supprimer la derniere ligne
+                    </button>
+                </div>
+                </div>
+              </div>
+
+           <div class="col-lg-12" style="margin-bottom: 50px;">
+             <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+
+               <!-- jour_férié Column -->
+               <ng-container matColumnDef="jour_férié">
+                 <th mat-header-cell style="text-align: center;" *matHeaderCellDef>Sélectionner une date</th>
+                 <td mat-cell *matCellDef="let element; let k = index;">
+                   <mat-form-field class="example-full-width"  style="width: 100%;"  appearance="fill">
+                     <mat-label>Choisir une date</mat-label>
+                     <input #date matInput [matDatepicker]="holiday" (dateChange)="getHolidayDate(k, $event)">
+                     <mat-datepicker-toggle matSuffix [for]="holiday"></mat-datepicker-toggle>
+                     <mat-datepicker touchUi #holiday></mat-datepicker>
+                   </mat-form-field>
+                 </td>
+               </ng-container>
+
+               <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+               <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+             </table>
+           </div>
+          <div class="col-lg-12">
+            <table mat-table #table [dataSource]="dataSource2" class="mat-elevation-z8 demo-table">
+
+              <!-- jour_férié Column -->
+              <ng-container matColumnDef="jour_férié">
+                <th mat-header-cell *matHeaderCellDef>Férié</th>
+                <td mat-cell *matCellDef="let element; let k = index;">
+                  <h1>{{element.holiday | date: 'dd/MM/yyyy'}}</h1>
+                </td>
+              </ng-container>
+
+              <!-- modifier Column -->
+              <ng-container matColumnDef="edit">
+                <th mat-header-cell *matHeaderCellDef>Modifier</th>
+                <td mat-cell *matCellDef="let element; let k = index;">
+                  <button mat-raised-button color="primary" (click)="editHoliday(element)">
+                    <mat-icon>edit</mat-icon>
+                  </button>
+                </td>
+              </ng-container>
+
+              <!-- delete Column -->
+              <ng-container matColumnDef="delete">
+                <th mat-header-cell *matHeaderCellDef> supprimer</th>
+                <td mat-cell *matCellDef="let element; let m = index">
+                  <button mat-raised-button color="accent" (click)="deleteHoliday( element)">
+                    <mat-icon>delete</mat-icon>
+                  </button>
+                </td>
+              </ng-container>
+
+              <tr mat-header-row *matHeaderRowDef="displayedColumns2"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns2;"></tr>
+            </table>
+          </div>
+           <hr>
+         </div>
+       </div>
+      <div class="col-lg-6">
+        <div class="row ferier">
+          <div class="col-lg-12">
+            <div class="col-lg-12">
+              <h1 style="text-align: center"> Planification hebdomadaire</h1>
+              <hr>
+            </div>
+            <div class="demo-button-container">
+              <div class="row">
+                <div class="col-lg-4">
+                  <button
+                    [disabled]="!dataSource.data.length"
+                    (click)="submitTime()"
+                    class="btn btn-success btn-schedule">
+                    Envoyer
+                  </button>
+                </div>
+                <div class="col-lg-4">
+                  <button
+
+                    (click)="addTime()"
+                    class="btn btn-primary btn-schedule">
+                    Ajouter une ligne
+                  </button>
+                </div>
+                <div class="col-lg-4">
+                  <button
+
+                    [disabled]="!dataSource.data.length"
+                    (click)="removeDataTime()"
+                    class="btn btn-warning btn-schedule">
+                    Supprimer la derniere ligne
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <table mat-table [dataSource]="dataSource1" class="mat-elevation-z8 demo-table">
+
+              <!-- jour Column -->
+              <ng-container matColumnDef="jour">
+                <th mat-header-cell *matHeaderCellDef>Jour</th>
+                <td mat-cell *matCellDef="let element; let l = index;">
+                  <mat-form-field appearance="fill">
+                    <mat-label>Selectionner le jour</mat-label>
+                    <mat-select [(ngModel)]="element.day">
+                      <mat-option *ngFor="let day of week" [value]="day">
+                        <p *ngIf="day == 'monday'">lundi</p>
+                        <p *ngIf="day == 'tuesday'">mardi</p>
+                        <p *ngIf="day == 'wednesday'">mercredi</p>
+                        <p *ngIf="day == 'thursday'">jeudi</p>
+                        <p *ngIf="day == 'friday'">vendredi</p>
+                        <p *ngIf="day == 'saturday'">samedi</p>
+                        <p *ngIf="day == 'sunday'">dimanche</p>
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </td>
+              </ng-container>
+
+              <!-- debut Column -->
+              <ng-container matColumnDef="debut">
+                <th mat-header-cell *matHeaderCellDef>Debut</th>
+                <td mat-cell *matCellDef="let element; let i = index">
+
+                  <ngb-timepicker [(ngModel)]="timeStart[i]"
+                                  (ngModelChange)="getStart(i, timeStart[i])"></ngb-timepicker>
+                </td>
+              </ng-container>
+
+              <!-- fin Column -->
+              <ng-container matColumnDef="fin">
+                <th mat-header-cell *matHeaderCellDef>Debut</th>
+                <td mat-cell *matCellDef="let element; let i = index">
+
+                  <ngb-timepicker [(ngModel)]="timeEnd[i]"
+                                  (ngModelChange)="getFin(i, timeEnd[i])"></ngb-timepicker>
+                </td>
+              </ng-container>
+
+              <!-- supprimer Column -->
+              <ng-container matColumnDef="supprimer">
+                <th mat-header-cell *matHeaderCellDef> supprimer</th>
+                <td mat-cell *matCellDef="let element">
+                  <button mat-raised-button color="warn" (click)="delete(element)">
+                    <mat-icon>delete</mat-icon>
+                  </button>
+                </td>
+              </ng-container>
+
+              <!-- envoyer Column -->
+              <ng-container matColumnDef="submit">
+                <th mat-header-cell *matHeaderCellDef> envoyer</th>
+                <td mat-cell *matCellDef="let element; let m = index">
+                  <button *ngIf="element.id === undefined" mat-raised-button color="accent"
+                          (click)="submitOneTime(m, element)">
+                    Envoyer
+                  </button>
+                  <button *ngIf="element.id !== undefined" mat-raised-button color="primary" (click)="edit(element)">
+                    <mat-icon>edit</mat-icon>
+                  </button>
+                </td>
+              </ng-container>
+
+              <tr mat-header-row *matHeaderRowDef="displayedColumns1"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns1;"></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container-fluid" style="background-color: whitesmoke;">
+  <div class="row ">
+    <div class="col-md-6">
+     <div class="row ferier">
+       <div class="col-lg-6">
+         <h3 style="text-align: left">
+           Modalités de paiement
+         </h3>
+         <hr>
+       </div>
+       <div class="col-lg-6">
+         <h3 style="text-align: left">
+           Services
+         </h3>
+         <hr>
+       </div>
+       <div class="col-md-6">
+         <section class="example-section" [formGroup]="payment">
+           <p><mat-checkbox formControlName="carte_bancaire">Carte bancaire</mat-checkbox></p>
+           <p><mat-checkbox formControlName="cash">Cash</mat-checkbox></p>
+         </section>
+       </div>
+       <div class="col-md-6">
+         <section class="example-section" [formGroup]="services">
+           <p><mat-checkbox formControlName="livraison" >Livraison</mat-checkbox></p>
+           <p><mat-checkbox formControlName="emporter">à emporter</mat-checkbox></p>
+           <p><mat-checkbox formControlName="sur_place" >Sur place</mat-checkbox></p>
+         </section>
+       </div>
+       <div class="col-md-12">
+         <button class="btn btn-primary btn-schedule" (click)="updateRestauInfo()">valider</button>
+       </div>
+     </div>
+
+    </div>
+
+
+
+
+
+
+  </div>
+</div>

@@ -1,0 +1,35 @@
+*{
+  font-weight: lighter;
+}
+
+table {
+  width: 100%;
+}
+
+
+/*mat slide color*/
+::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
+  background-color: rgba(0, 180, 81, 0.52) ;
+}
+
+::ng-deep  .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+  background-color:#00B451;
+}
+
+
+/*filter color*/
+::ng-deep .mat-focused .mat-form-field-label  {
+  /*change color of label*/
+  color: #343a40 !important;
+}
+
+::ng-deep.mat-form-field-underline {
+  /*change color of underline*/
+  background-color: #343a40 !important;
+}
+
+::ng-deep.mat-form-field-ripple {
+  /*change color of underline when focused*/
+  background-color: #343a40 !important;;
+}
+

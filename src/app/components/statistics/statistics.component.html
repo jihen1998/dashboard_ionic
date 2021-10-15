@@ -1,0 +1,98 @@
+
+<form #f="ngForm" (ngSubmit)="getdataOfNewYear()">
+  <label style="font-size: 24px;">
+    <mat-icon style="vertical-align: middle; color: #00B451"> bar_chart</mat-icon>
+    Statistique des codes reductions:
+  </label>
+  <mat-form-field style="width: 90px">
+    <input style="font-size: 18pt; text-align: center; font-weight: bold;" matInput
+           type="number" name="anne" ngModel #annee="ngModel"
+           [(ngModel)]="year"
+           (ngModelChange)="getdataOfNewYear()">
+  </mat-form-field>
+</form>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-4 ">
+      <canvas class="chartstat" baseChart
+              [datasets]="barChartData"
+              [labels]="barChartLabels"
+              [options]="barChartOptions"
+              [colors]="barChartColors"
+              [legend]="barChartLegend"
+              [chartType]="barChartType">
+      </canvas>
+    </div>
+    <div class="col-lg-4 ">
+      <canvas class="chartstat" baseChart
+              [datasets]="barChartDataQuantity"
+              [labels]="barChartLabelsQuantity"
+              [options]="barChartOptions"
+              [colors]="barChartColors"
+              [legend]="barChartLegend"
+              [chartType]="barChartType">
+      </canvas>
+    </div>
+
+
+    <div class="col-lg-4 ">
+      <canvas class="chartstat" baseChart
+              [datasets]="barChartDataCodes"
+              [labels]="barChartLabelcodes"
+              [options]="barChartOptions"
+              [colors]="barChartColors"
+              [legend]="barChartLegend"
+              [chartType]="barChartType">
+      </canvas>
+    </div>
+  <div class="col-lg-12 chartstat" style="vertical-align: middle">
+    <h3 style="text-align: left; font-size: 16pt; padding: 10px;">
+      Nombre de codes de reductions actives: &nbsp; {{nbrActiveCodes}}
+    </h3>
+  </div>
+    <div class="col-lg-12">
+      <div class="table-responsive">
+        <table class="table" mat-table matSort [dataSource]="dataSource" style="width: 100%">
+          <!-- Nom Column -->
+          <ng-container matColumnDef="nom">
+            <th class=" text-primary" mat-header-cell mat-sort-header *matHeaderCellDef> Nom & prenom</th>
+            <td mat-cell *matCellDef="let element">
+              <p style="font-size: 14pt;line-height: 14pt;">
+                {{element.nom}} &nbsp; {{element.prenom}}
+              </p>
+            </td>
+          </ng-container>
+          <ng-container matColumnDef="email">
+            <th class=" text-primary" mat-header-cell mat-sort-header *matHeaderCellDef> email</th>
+            <td mat-cell *matCellDef="let element">
+              <p style="font-size: 14pt;line-height: 14pt;">
+                {{element.email}}
+              </p>
+            </td>
+          </ng-container>
+          <ng-container matColumnDef="code">
+            <th class=" text-primary" mat-header-cell mat-sort-header *matHeaderCellDef> code</th>
+            <td mat-cell *matCellDef="let element">
+              <p style="font-size: 14pt;line-height: 14pt;">
+                {{element.code}}
+              </p>
+            </td>
+          </ng-container>
+          <ng-container matColumnDef="nbruse">
+            <th class=" text-primary" mat-header-cell mat-sort-header *matHeaderCellDef> nombre d'utilisation</th>
+            <td mat-cell *matCellDef="let element">
+              <p style="font-size: 14pt;line-height: 14pt;">
+                {{element.nbruse}}
+              </p>
+            </td>
+          </ng-container>
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]"  style="width: 100%" showFirstLastButtons></mat-paginator>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,398 @@
+<div class="container-fluid stat_container">
+  <div class="row">
+      <div class="col-lg-7 container-courbe">
+        <div class="row">
+          <div class="col-lg-12 title-courbe ">
+            <form #f="ngForm" (ngSubmit)="getTurnover(f)">
+              <label style="font-size: 24px;">
+                <mat-icon style="vertical-align: middle; color: #00B451"> bar_chart</mat-icon>
+                Allure chiffre d'affaire: &nbsp;
+              </label>
+              <mat-form-field style="width: 90px">
+                <input style="font-size: 18pt; text-align: center; font-weight: bold;" matInput
+                       type="number" name="anne" ngModel #annee="ngModel" (ngModelChange)="getTurnover($event)"
+                       [(ngModel)]="year">
+              </mat-form-field>
+            </form>
+
+            <hr>
+          </div>
+          <div class="col-lg-12 courbes">
+            <canvas baseChart class="stat1" id="bigDashboardChart"
+                    [datasets]="lineBigDashboardChartData"
+                    [labels]="lineBigDashboardChartLabels"
+                    [colors]="lineBigDashboardChartColors"
+                    [options]="lineBigDashboardChartOptions"
+                    [chartType]="lineBigDashboardChartType"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)">
+            </canvas>
+          </div>
+          <div class="col-lg-4">
+            <canvas baseChart class="stat2" id="bigDashboardStripeChart"
+                    [datasets]="lineBigDashboardChartStripeData"
+                    [labels]="lineBigDashboardChartStripeLabels"
+                    [colors]="lineBigDashboardChartStripeColors"
+                    [options]="lineBigDashboardChartStripeOptions"
+                    [chartType]="lineBigDashboardChartStripeType"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)"></canvas>
+          </div>
+
+          <div class="col-lg-4" >
+            <canvas baseChart class="stat3" id="bigDashboardPaypalChart"
+                    [datasets]="lineBigDashboardChartPaypalData"
+                    [labels]="lineBigDashboardChartPaypalLabels"
+                    [colors]="lineBigDashboardChartPaypalColors"
+                    [options]="lineBigDashboardChartPaypalOptions"
+                    [chartType]="lineBigDashboardChartStripeType"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)">
+            </canvas>
+          </div>
+
+          <div class="col-lg-4" >
+            <canvas baseChart class="stat4" id="bigDashboardEspeceChart"
+                    [datasets]="lineBigDashboardChartEspeceData"
+                    [labels]="lineBigDashboardChartEspeceLabels"
+                    [colors]="lineBigDashboardChartEspeceColors"
+                    [options]="lineBigDashboardChartEspeceOptions"
+                    [chartType]="lineBigDashboardChartStripeType"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)"></canvas>
+          </div>
+        </div>
+        <br>
+        <br>
+        <hr>
+        <div class="col-lg-7 stat-ca" style="width: 98%!important;">
+          <h2 style="text-align: center;">
+            <mat-icon style="vertical-align: middle; color: #00B451"> bar_chart</mat-icon>
+            Statistique des clients
+          </h2>
+
+          <div class="row">
+            <div class="col-lg-12" style="padding: 0!important;" >
+              <div class="card" style="font-weight: lighter;">
+                <div class="card-header">
+                  <h4 class="card-title" style="text-align: center"> Liste des clients</h4>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive"  >
+                    <table class="table" mat-table matSort [dataSource]="dataSource" style="width: 100%">
+                      <!-- etat Column -->
+                      <ng-container matColumnDef="etat">
+                        <th class=" text-primary" mat-header-cell mat-sort-header *matHeaderCellDef>Etat</th>
+                        <td mat-cell *matCellDef="let element">
+                          <p style="font-size: 12pt;line-height: 12pt;" *ngIf="element.is_connected" style="color: #00B451">
+                            en ligne
+                          </p>
+                          <p style="font-size: 12pt;line-height: 12pt;" *ngIf="!element.is_connected">
+                            Hors ligne
+                          </p>
+                        </td>
+                      </ng-container>
+                      <!-- Nom Column -->
+                      <ng-container matColumnDef="nom">
+                        <th class=" text-primary" mat-header-cell mat-sort-header *matHeaderCellDef> Nom & prenom</th>
+                        <td mat-cell *matCellDef="let element">
+                          <p style="font-size: 12pt;line-height: 12pt;">
+                            {{element.nom}} &nbsp; {{element.prenom}}
+                          </p>
+                        </td>
+                      </ng-container>
+                      <!-- email Column -->
+                      <ng-container matColumnDef="email">
+                        <th class=" text-primary" mat-header-cell mat-sort-header *matHeaderCellDef> Email</th>
+                        <td mat-cell *matCellDef="let element">
+                          <p style="font-size: 12pt;line-height: 12pt;">
+                            {{element.email}}
+                          </p>
+                        </td>
+                      </ng-container>
+                      <!-- tel Column -->
+                      <ng-container matColumnDef="tel">
+                        <th class=" text-primary" mat-header-cell mat-sort-header *matHeaderCellDef> tel</th>
+                        <td mat-cell *matCellDef="let element">
+                          <p style="font-size: 12pt;line-height: 12pt;">
+                            {{element.numero_de_telephone}}
+                          </p>
+                        </td>
+                      </ng-container>
+                      <!-- datenaissance Column -->
+                      <ng-container matColumnDef="datenaissance">
+                        <th class=" text-primary" mat-header-cell mat-sort-header *matHeaderCellDef> Date de naissance</th>
+                        <td mat-cell *matCellDef="let element">
+                          <p style="font-size: 12pt;line-height: 12pt;">
+                            {{element.date_de_naissance}}
+                          </p>
+                        </td>
+                      </ng-container>
+                      <!-- commandes Column -->
+                      <ng-container matColumnDef="commandes">
+                        <th class=" text-primary" mat-header-cell *matHeaderCellDef> Commandes</th>
+                        <td mat-cell *matCellDef="let element; let i = index;">
+                          <button mat-button (click)="historic(element)">
+                            <mat-icon>visibility</mat-icon>
+                          </button>
+                        </td>
+                      </ng-container>
+                      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    </table>
+                    <mat-paginator [pageSizeOptions]="[5, 10, 20]" style="width: 100%" showFirstLastButtons></mat-paginator>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-12">
+              <div class="card" style="font-weight: lighter;">
+                <div class="card-header">
+                  <h4 class="card-title" style="text-align: center"> TOP 10 clients</h4>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table" mat-table matSort [dataSource]="dataSourcetop10" style="width: 100%">
+                      <!-- nbrcmd Column -->
+                      <ng-container matColumnDef="nbrcmd">
+                        <th class=" text-primary" mat-header-cell mat-sort-header *matHeaderCellDef> nombre de commandes</th>
+                        <td mat-cell *matCellDef="let element">
+                          {{element.nbrCmd}}
+                        </td>
+                      </ng-container>
+                      <!-- etat Column -->
+                      <ng-container matColumnDef="etat">
+                        <th class=" text-primary" mat-header-cell mat-sort-header *matHeaderCellDef>Etat</th>
+                        <td mat-cell *matCellDef="let element">
+                          <p style="font-size: 12pt;line-height: 12pt;" *ngIf="element.is_connected" style="color: #00B451">
+                            en ligne
+                          </p>
+                          <p style="font-size: 12pt;line-height: 12pt;" *ngIf="!element.is_connected">
+                            Hors ligne
+                          </p>
+                        </td>
+                      </ng-container>
+                      <!-- Nom Column -->
+                      <ng-container matColumnDef="nom">
+                        <th class=" text-primary" mat-header-cell mat-sort-header *matHeaderCellDef> Nom & prenom</th>
+                        <td mat-cell *matCellDef="let element">
+                          <p style="font-size: 12pt;line-height:12pt;">
+                            {{element.nom}} &nbsp; {{element.prenom}}
+                          </p>
+                        </td>
+                      </ng-container>
+                      <!-- email Column -->
+                      <ng-container matColumnDef="email">
+                        <th class=" text-primary" mat-header-cell mat-sort-header *matHeaderCellDef> Email</th>
+                        <td mat-cell *matCellDef="let element">
+                          <p style="font-size: 12pt;line-height: 12pt;">
+                            {{element.email}}
+                          </p>
+                        </td>
+                      </ng-container>
+                      <!-- tel Column -->
+                      <ng-container matColumnDef="tel">
+                        <th class=" text-primary" mat-header-cell mat-sort-header *matHeaderCellDef> tel</th>
+                        <td mat-cell *matCellDef="let element">
+                          <p style="font-size: 12pt;line-height: 12pt;">
+                            {{element.numero_de_telephone}}
+                          </p>
+                        </td>
+                      </ng-container>
+                      <!-- datenaissance Column -->
+                      <ng-container matColumnDef="datenaissance">
+                        <th class=" text-primary" mat-header-cell mat-sort-header *matHeaderCellDef> Date de naissance</th>
+                        <td mat-cell *matCellDef="let element">
+                          <p style="font-size: 12pt;line-height: 12pt;">
+                            {{element.date_de_naissance}}
+                          </p>
+                        </td>
+                      </ng-container>
+                      <tr mat-header-row *matHeaderRowDef="displayedColumnstop10"></tr>
+                      <tr mat-row *matRowDef="let row; columns: displayedColumnstop10;"></tr>
+                    </table>
+                    <mat-paginator [pageSizeOptions]="[5, 10, 20]" style="width: 100%" showFirstLastButtons></mat-paginator>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+    <div class="col-lg-5">
+      <div class="row stat-ca">
+
+        <div class="col-lg-2">
+          <h3 style="font-size: 18pt; font-weight: bold">
+            Annuel: &nbsp;
+          </h3>
+
+        </div>
+
+        <div class="col-lg-6">
+          <h3 style="font-size: 16pt; font-weight: lighter">
+
+            {{chiffre_affaire_annuel | currency:"EUR": true}}
+          </h3>
+          <hr>
+        </div>
+
+        <div class="col-lg-12">
+          <div class="row" style="vertical-align: center">
+            <div class="col-lg-2">
+              <h3 style="font-size: 18pt; font-weight: bold">
+                CA:
+              </h3>
+            </div>
+            <div class="col-lg-6" >
+              <h3  style="font-size: 16pt; font-weight: lighter">
+                {{chiffre_affaire_mensuelle | currency:"EUR": true}}
+              </h3>
+            </div>
+            <div class="col-lg-4 " >
+              <mat-form-field appearance="fill"  class="datepikerca">
+                <mat-label>Selectionner la periode</mat-label>
+                <mat-date-range-input [formGroup]="rangeChiffreAffaireMensuelle" [rangePicker]="picker" >
+                  <input matStartDate formControlName="start" placeholder="Start date">
+                  <input matEndDate formControlName="end" placeholder="End date"
+                         (dateChange)="getrangeChiffreAffaireMensuelle()">
+                </mat-date-range-input>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-date-range-picker #picker></mat-date-range-picker>
+
+                <mat-error *ngIf="range.controls.start.hasError('matStartDateInvalid')">Invalid start date</mat-error>
+                <mat-error *ngIf="range.controls.end.hasError('matEndDateInvalid')">Invalid end date</mat-error>
+              </mat-form-field>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-12">
+        <div class="row" >
+          <div class="col-lg-12">
+            <hr>
+            <h2>
+              <mat-icon style="vertical-align: middle; color: #00B451"> bar_chart</mat-icon>
+              USER TOP ONE
+            </h2>
+            <hr>
+          </div>
+
+          <div class="col-lg-12">
+            <div class="card card-user">
+              <div class="card-body">
+                <div class="author">
+                  <img class="avatar border-gray"
+                       *ngIf="image == ''"
+                       src="../../assets/img/rs_2.png" height="250" width="250"/>
+                  <img class="avatar border-gray"
+                       *ngIf="image != ''"
+                       src="{{image}}">
+                  <h5 class="title" style="font-size: 16pt;line-height: 16pt;">
+                    {{topTenUsers[0].nom}} &nbsp; {{topTenUsers[0].prenom}}
+                  </h5>
+                  <hr>
+                  <br>
+                  <p class="description" style="font-size: 14pt;line-height: 14pt;">
+                    {{topTenUsers[0].email}}
+                  </p>
+                  <p class="description" style="font-size: 14pt;line-height: 14pt;">
+                    {{topTenUsers[0].numero_de_telephone}}
+                  </p>
+                  <p class="description" style="font-size: 14pt;line-height: 14pt;">
+                    {{topTenUsers[0].date_de_naissance}}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-12 stat-ca" style="vertical-align: middle">
+        <h2>
+          Clients Connectés: &nbsp; {{nbrUserConnected}}
+        </h2>
+      </div>
+      <div class="col-lg-12 stat-ca">
+          <h2 style="text-align: center;">
+            <mat-icon style="vertical-align: middle; color: #00B451"> bar_chart</mat-icon>
+            Statistique des ventes
+          </h2>
+          <hr>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="row">
+                <div class="col-lg-12">
+                  <!--pltas vendus-->
+                  <canvas baseChart
+                          [datasets]="barChartData"
+                          [labels]="barChartLabels"
+                          [options]="barChartOptions"
+                          [legend]="barChartLegend"
+                          [chartType]="barChartType"
+                  >
+                  </canvas>
+                </div>
+                <div class="col-lg-12">
+                  <!--pltas vendus par date-->
+                  <canvas baseChart
+                          [datasets]="barChartData1"
+                          [labels]="barChartLabels"
+                          [options]="barChartOptions1"
+                          [legend]="barChartLegend"
+                          [chartType]="barChartType"
+                  >
+                  </canvas>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-12">
+              <div class="row">
+                <div class="col-lg-6">
+                  <!-- 1st and last date here!-->
+                </div>
+
+                <div class="col-lg-6">
+                  <mat-form-field appearance="fill">
+                    <mat-label>Enter a date range</mat-label>
+                    <mat-date-range-input [formGroup]="range" [rangePicker]="picker">
+                      <input matStartDate formControlName="start" placeholder="Start date">
+                      <input matEndDate formControlName="end" placeholder="End date" (dateChange)="getrange()">
+                    </mat-date-range-input>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-date-range-picker #picker></mat-date-range-picker>
+
+                    <mat-error *ngIf="range.controls.start.hasError('matStartDateInvalid')">Invalid start date</mat-error>
+                    <mat-error *ngIf="range.controls.end.hasError('matEndDateInvalid')">Invalid end date</mat-error>
+                  </mat-form-field>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+

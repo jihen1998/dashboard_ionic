@@ -1,0 +1,32 @@
+a {
+  color: white;
+  text-decoration: none;
+}
+
+mat-expansion-panel-header {
+  background-color: rgb(92 141 216);
+}
+
+mat-panel-title {
+  color: white;
+}
+
+.logo {
+  padding-bottom: 3%;
+  background-color: rgb(121 151 196);
+}
+
+.bg-blue {
+background: rgb(121 151 196);
+}
+
+.bg-blue-panel:hover, .bg-blue-panel:focus {
+  background: rgb(92 141 190);
+}
+.mat-expansion-panel {
+   background:  rgb(121 151 196);
+   box-shadow: none;
+}
+sidebar{
+  background: #fcfcfc !important;
+}

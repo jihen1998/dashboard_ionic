@@ -1,0 +1,30 @@
+<form>
+  <mat-form-field class="example-chip-list" appearance="fill">
+    <mat-label>affectation plats au modificateur</mat-label>
+    <mat-chip-list #chipList aria-label="Fruit selection">
+      <mat-chip
+        *ngFor="let plat of plats"
+        [selectable]="selectable"
+        [removable]="removable"
+        (removed)="remove(plat)">
+        {{plat}}
+        <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+      </mat-chip>
+      <input
+        matInput
+        placeholder="Nouvel plat..."
+        #fruitInput
+        [formControl]="fruitCtrl"
+        [matAutocomplete]="auto"
+        [matChipInputFor]="chipList"
+        [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+        (matChipInputTokenEnd)="add($event)">
+    </mat-chip-list>
+    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+      <mat-option *ngFor="let plat of filteredPlats | async" [value]="plat">
+        {{plat.nom}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+  <button mat-raised-button type="submit" (click)="affect()">confirmer</button>
+</form>

@@ -1,0 +1,216 @@
+<div class="bg-dark">
+
+  <mat-accordion>
+
+    <mat-expansion-panel (opened)="displayCol()"
+                         (closed)="panelOpenState = false"
+                         [expanded]="true"
+                         class="bg-dark"
+    >
+      <mat-expansion-panel-header >
+        <mat-panel-title>
+          ajouter temps de travail
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="demo-button-container" *ngIf="displayedColumns !== displayedColumns1">
+        <button
+          mat-raised-button
+          [disabled]="!dataSource.data.length"
+          (click)="submit()"
+          class="demo-button">
+          Envoyer
+        </button>
+        <button
+          mat-raised-button
+          [disabled]="!dataSource.data.length"
+          (click)="removeData()"
+          class="demo-button">
+          Supprimer la derniere ligne
+        </button>
+      </div>
+
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table" *ngIf="displayedColumns !== displayedColumns1">
+        <!-- jour Column -->
+        <ng-container matColumnDef="jour">
+          <th mat-header-cell *matHeaderCellDef>Jour</th>
+          <td mat-cell *matCellDef="let element; let l = index;">
+            <mat-form-field appearance="fill">
+              <mat-label>Selectionner le jour</mat-label>
+              <mat-select [(ngModel)]="dayselected[l]" (selectionChange)="selectday(l)">
+                <mat-option *ngFor="let day of week" [value]="day">{{day}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- debut Column -->
+        <ng-container matColumnDef="debut">
+          <th mat-header-cell *matHeaderCellDef>Debut</th>
+          <td mat-cell *matCellDef="let element; let i = index">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Choisir une date</mat-label>
+              <input matInput [matDatepickerFilter]="myFilter[i]" [matDatepicker]="picker"
+                     (dateChange)="getStartDate(i, $event)">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker touchUi #picker></mat-datepicker>
+            </mat-form-field>
+            <ngb-timepicker *ngIf="element.start" [(ngModel)]="timeStart[i]"
+                            (ngModelChange)="getStartTime(i, timeStart[i])"></ngb-timepicker>
+          </td>
+        </ng-container>
+
+        <!-- fin Column -->
+        <ng-container matColumnDef="fin">
+          <th mat-header-cell *matHeaderCellDef>Fin</th>
+          <td mat-cell *matCellDef="let element; let j = index">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Choisir une date</mat-label>
+              <input matInput [matDatepicker]="fin" (dateChange)="getFinDate(j, $event)">
+              <mat-datepicker-toggle matSuffix [for]="fin"></mat-datepicker-toggle>
+              <mat-datepicker touchUi #fin></mat-datepicker>
+            </mat-form-field>
+            <ngb-timepicker *ngIf="element.end" [(ngModel)]="timeEnd[j]"
+                            (ngModelChange)="getEndTime(j, timeEnd[j])"></ngb-timepicker>
+          </td>
+        </ng-container>
+
+        <!-- jour_férié Column -->
+        <ng-container matColumnDef="jour_férié">
+          <th mat-header-cell *matHeaderCellDef>Férié</th>
+          <td mat-cell *matCellDef="let element; let k = index;">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Choose a date</mat-label>
+              <input matInput [matDatepicker]="holiday" (dateChange)="getHolidayDate(k, $event)">
+              <mat-datepicker-toggle matSuffix [for]="holiday"></mat-datepicker-toggle>
+              <mat-datepicker touchUi #holiday></mat-datepicker>
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- validate Column -->
+        <ng-container matColumnDef="validate">
+          <th mat-header-cell *matHeaderCellDef>Valider</th>
+          <td mat-cell *matCellDef="let element">
+            <button
+              mat-raised-button
+              (click)="addData()"
+              class="demo-button">
+              Add data
+            </button>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel (opened)="displayCol1()"
+                         (closed)="panelOpenState = false"
+                         class="bg-dark"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Consulter les temps de travail
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <div *ngIf="displayedColumns === displayedColumns1">
+        <mat-form-field color="accent">
+          <input matInput (keyup)="applyFilter($event)" placeholder="Filter" #input>
+        </mat-form-field>
+      </div>
+
+      <div class="mat-elevation-z8" *ngIf="displayedColumns === displayedColumns1">
+        <table mat-table matSort [dataSource]="dataSource1">
+
+          <!-- Day Column -->
+          <ng-container matColumnDef="jour">
+            <th mat-header-cell mat-sort-header *matHeaderCellDef> Jour</th>
+            <td mat-cell *matCellDef="let element">
+              <div *ngIf="element.date.getDay() ===0">
+                dimanche {{element.date.getDate()}}/{{element.date.getMonth()}}/ {{element.date.getFullYear()}}
+              </div>
+              <div *ngIf="element.date.getDay() ===1">
+                lundi {{element.date.getDate()}}/{{element.date.getMonth()}}/ {{element.date.getFullYear()}}
+              </div>
+              <div *ngIf="element.date.getDay() ===2">
+                mardi {{element.date.getDate()}}/{{element.date.getMonth()}}/ {{element.date.getFullYear()}}
+              </div>
+              <div *ngIf="element.date.getDay() ===3">
+                mercredi {{element.date.getDate()}}/{{element.date.getMonth()}}/ {{element.date.getFullYear()}}
+              </div>
+              <div *ngIf="element.date.getDay() ===4">
+                jeudi {{element.date.getDate()}}/{{element.date.getMonth()}}/ {{element.date.getFullYear()}}
+              </div>
+              <div *ngIf="element.date.getDay() ===5">
+                vendredi {{element.date.getDate()}}/{{element.date.getMonth()}}/ {{element.date.getFullYear()}}
+              </div>
+              <div *ngIf="element.date.getDay() ===6">
+                samedi {{element.date.getDate()}}/{{element.date.getMonth()}}/ {{element.date.getFullYear()}}
+              </div>
+            </td>
+          </ng-container>
+
+          <!-- Start Column -->
+          <ng-container matColumnDef="debut">
+            <th mat-header-cell *matHeaderCellDef> Début</th>
+            <td mat-cell *matCellDef="let element">
+              <p *ngIf="element.worktime.start">{{element.worktime.start.substr(11)}}</p>
+            </td>
+          </ng-container>
+
+          <!-- end Column -->
+          <ng-container matColumnDef="fin">
+            <th mat-header-cell *matHeaderCellDef> Fin</th>
+            <td mat-cell *matCellDef="let element">
+              <p *ngIf="element.worktime.end">{{element.worktime.end.substr(11)}}</p>
+            </td>
+          </ng-container>
+
+          <!-- Holidays Column -->
+          <ng-container matColumnDef="jour_férié">
+            <th mat-header-cell *matHeaderCellDef> Jour férié</th>
+            <td mat-cell *matCellDef="let element">
+              <p>{{element.worktime.holiday}}</p>
+            </td>
+          </ng-container>
+
+          <!-- edit Column -->
+          <ng-container matColumnDef="edit">
+            <th mat-header-cell *matHeaderCellDef> modifier</th>
+            <td mat-cell *matCellDef="let element">
+              <button mat-raised-button color="primary" (click)="edit(element)">
+                <mat-icon>edit</mat-icon>
+              </button>
+            </td>
+          </ng-container>
+
+          <!-- delete Column -->
+          <ng-container matColumnDef="delete">
+            <th mat-header-cell *matHeaderCellDef> supprimer</th>
+            <td mat-cell *matCellDef="let element">
+              <button mat-raised-button color="warn" (click)="delete(element)">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+          <!-- Row shown when there is no matching data. -->
+          <tr class="mat-row" *matNoDataRow>
+            <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+          </tr>
+
+        </table>
+
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+      </div>
+
+    </mat-expansion-panel>
+
+  </mat-accordion>
+
+</div>

@@ -1,0 +1,27 @@
+<div class="mdc-dialog text_align-center">
+  <div class="mdc-dialog__container">
+    <div class="mdc-dialog__surface"
+         role="alertdialog"
+         aria-modal="true"
+         aria-labelledby="my-dialog-title"
+         aria-describedby="my-dialog-content">
+      <div class="mdc-dialog__content" id="my-dialog-content">
+        voulez vous ajouter un autre?
+      </div>
+      <br>
+      <div class="mdc-dialog__actions">
+        <button type="button" class="mdc-button mdc-dialog__button" style="margin-right: 2%"
+                data-mdc-dialog-action="cancel" (click)="confirmer('oui')">
+          <div class="mdc-button__ripple"></div>
+          <span class="mdc-button__label">oui</span>
+        </button>
+        <button type="button" class="mdc-button mdc-dialog__button"
+                data-mdc-dialog-action="discard" (click)="confirmer('non')">
+          <div class="mdc-button__ripple"></div>
+          <span class="mdc-button__label">non</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="mdc-dialog__scrim"></div>
+</div>

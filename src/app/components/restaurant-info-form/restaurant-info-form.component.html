@@ -1,0 +1,81 @@
+<div class="title">
+  <h1 class="text_align-center" style="margin-left: 30%">restaurant</h1>
+</div>
+<form #f="ngForm"  (ngSubmit)="onsubmit(f)">
+      <div class="example-container">
+        <br>
+        <mat-form-field appearance="fill" class="width-50 col-10">
+          <mat-label>Nom</mat-label>
+          <input matInput type="text" name="nom_restaurant" [(ngModel)]="data.nom_restaurant" ngModel #nom_restaurant="ngModel" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill" class="width-50 col-5">
+          <mat-label>Addresse</mat-label>
+          <input matInput name="address" [(ngModel)]="data.address" ngModel #address="ngModel" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="width-50 col-5">
+          <mat-label>Tel</mat-label>
+          <input matInput type="tel" name="tel" [(ngModel)]="data.tel" ngModel #tel="ngModel" required>
+        </mat-form-field>
+        <br>
+        <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">Stripe</h6>
+        <mat-form-field appearance="fill" class="width-50 col-5">
+          <mat-label>Clé secret</mat-label>
+          <input matInput name="secret_key_stripe" [(ngModel)]="data.secret_key_stripe" ngModel #secret_key_stripe="ngModel" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="width-50 col-5">
+          <mat-label>Clé publique</mat-label>
+          <input matInput name="public_key_stripe" [(ngModel)]="data.public_key_stripe" ngModel #public_key_stripe="ngModel" required>
+        </mat-form-field>
+        <br>
+        <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">Paypal</h6>
+        <mat-form-field appearance="fill" class="width-50 col-5">
+          <mat-label>Clé secret</mat-label>
+          <input matInput name="secret_key_paypal" [(ngModel)]="data.secret_key_paypal" ngModel #secret_key_paypal="ngModel" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="width-50 col-5">
+          <mat-label>Clé publique</mat-label>
+          <input matInput name="public_key_paypal" [(ngModel)]="data.public_key_paypal" ngModel #public_key_paypal="ngModel" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill" class="width-50 col-10">
+          <mat-label>num siret</mat-label>
+          <input matInput type="text" name="num_siret" [(ngModel)]="data.num_siret" ngModel #num_siret="ngModel" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill" class="width-50 col-10">
+          <mat-label>num siren</mat-label>
+          <input matInput type="text" name="num_siren" [(ngModel)]="data.num_siren" ngModel #num_siren="ngModel" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill" class="width-50 col-10">
+          <mat-label>num tva</mat-label>
+          <input matInput type="text" name="num_tva" [(ngModel)]="data.num_tva" ngModel #num_tva="ngModel" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill" class="width-50 col-10">
+          <mat-label>num tva intercommunautaire</mat-label>
+          <input matInput type="text" name="num_tva_intercommunautaire" [(ngModel)]="data.num_tva_intercommunautaire" ngModel #num_tva_intercommunautaire="ngModel" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill" class="width-50 col-10">
+          <mat-label>rib</mat-label>
+          <input matInput type="number" name="rib" [(ngModel)]="data.rib" ngModel #rib="ngModel" required>
+        </mat-form-field>
+        <br>
+
+        <mat-select [(value)]="selected">
+          <mat-label>Select an option</mat-label>
+          <mat-option *ngFor="let u of allUsers" value= "{{u.id}}">{{u.nom}}</mat-option>
+        </mat-select>
+
+        <div class="width-50 col-10">
+          <input type="file" (change)="uploadImages($event)">
+        </div>
+        <br>
+
+        <button mat-stroked-button class="ml-3" style="background-color: #b0bec5" [disabled]="f.invalid">envoyer</button>
+        <button mat-stroked-button type="reset" class="ml-3" style="background-color: #b0bec5" >vider le formulaire</button>
+        <button type="button" mat-stroked-button class="ml-3" style="background-color: #b0bec5" (click)="onclose(f)" >annuler/terminer</button>
+      </div>
+</form>
