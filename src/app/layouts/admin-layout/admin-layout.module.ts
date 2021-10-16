@@ -19,22 +19,24 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MaterialModule} from '../../material/material.module';
+import {IonicModule} from '@ionic/angular';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterModule.forChild(AdminLayoutRoutes),
-    FormsModule,
-    ChartsModule,
-    NgbModule,
-    ToastrModule.forRoot(),
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    MatGridListModule,
-    MaterialModule,
-    ReactiveFormsModule
-  ],
+    imports: [
+        CommonModule,
+        RouterModule.forChild(AdminLayoutRoutes),
+        FormsModule,
+        ChartsModule,
+        NgbModule,
+        ToastrModule.forRoot(),
+        MatFormFieldModule,
+        MatInputModule,
+        MatButtonModule,
+        MatGridListModule,
+        MaterialModule,
+        ReactiveFormsModule,
+        IonicModule
+    ],
   declarations: [
     DashboardComponent,
     UserProfileComponent,

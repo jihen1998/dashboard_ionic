@@ -23,7 +23,6 @@
         position: relative;
         height: calc(100vh - 75px);
         overflow: auto;
-        width: 260px;
         z-index: 4;
         padding-bottom: 100px;
 
@@ -307,9 +306,7 @@
 
 .main-panel{
     position: relative;
-    float: right;
-    width: $sidebar-width;
-    // width: 100%;
+    min-width: 100%;
     background-color: $light-gray;
     background-color: #ebecf1;
 

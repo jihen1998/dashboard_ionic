@@ -53,6 +53,7 @@ import {AngularFireDatabaseModule} from '@angular/fire/database';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {FirebaseService} from './Services/Firebase/firebase.service';
 import {ThermalPrintModule} from 'ng-thermal-print';
+import { IonicModule } from '@ionic/angular';
 
 @NgModule({
   imports: [
@@ -69,7 +70,8 @@ import {ThermalPrintModule} from 'ng-thermal-print';
     AngularFireDatabaseModule,
     ThermalPrintModule,
     AngularFireModule.initializeApp(Env.firebase),
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    IonicModule.forRoot()
   ],
   declarations: [
     AppComponent,

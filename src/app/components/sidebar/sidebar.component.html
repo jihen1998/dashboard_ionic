@@ -5,38 +5,26 @@
       </div>
     </a>-->
   <div style="display: flex; justify-content: center; height: 30px;">
-    <img src="../../../assets/img/maria cantina logo.png" style=" position: absolute; top:0px;" width="130"/>
+    <img src="../../../assets/img/maria cantina logo.png" style=" position: absolute; top:0px;" width="100"/>
   </div>
     <a class="simple-text logo-normal"></a>
 </div>
 <div class="sidebar-wrapper bg-blue" >
-<div class="sidebar-wrapper bg-blue" >
   <mat-accordion>
-    <mat-expansion-panel hideToggle disabled style="margin-top: 10%">
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          <a [routerLink]="[menuItems[0].path]">
-            <p><mat-icon style="vertical-align: middle">dashboard</mat-icon> {{menuItems[0].title}}</p>
-          </a>
-        </mat-panel-title>
-      </mat-expansion-panel-header>
-    </mat-expansion-panel>
 
     <mat-expansion-panel (opened)="panelOpenState = true"
                          (closed)="panelOpenState = false"
                          class="bg-blue-panel">
       <mat-expansion-panel-header>
         <mat-panel-title>
-          <mat-icon style="vertical-align: middle">receipt</mat-icon>
-          &nbsp;
-          Commandes
+          <mat-icon  style="vertical-align: middle">receipt</mat-icon>
         </mat-panel-title>
       </mat-expansion-panel-header>
-      <div class="bg-blue-panel">
-        <a class="dropdown-item" [routerLink]="menuItems[1].path">En attente</a>
-        <a class="dropdown-item" [routerLink]="menuItems[2].path">En cours</a>
-        <a class="dropdown-item" [routerLink]="menuItems[3].path">Terminés</a> <!--commande de ce jour-->
-        <a class="dropdown-item" [routerLink]="menuItems[4].path">Archivés</a> <!--historique de tt les commandes-->
+      <div class="bg-blue-panel" style="width: 100%">
+        <a class="dropdown-item " [routerLink]="menuItems[1].path"><mat-icon class="icon-cmd">notifications_active</mat-icon></a>
+        <a class="dropdown-item " [routerLink]="menuItems[2].path"><mat-icon class="icon-cmd" style="">slow_motion_video</mat-icon></a>
+        <a class="dropdown-item "  [routerLink]="menuItems[3].path"><mat-icon  class="icon-cmd">done_all</mat-icon></a> <!--commande de ce jour-->
+        <a class="dropdown-item " [routerLink]="menuItems[4].path"><mat-icon class="icon-cmd">archive</mat-icon></a> <!--historique de tt les commandes-->
       </div>
     </mat-expansion-panel>
 
@@ -46,7 +34,6 @@
       <mat-expansion-panel-header>
         <mat-panel-title>
           <mat-icon style="vertical-align: middle">shopping_basket</mat-icon> &nbsp;
-          Gestion produits
         </mat-panel-title>
       </mat-expansion-panel-header>
       <a class="dropdown-item" [routerLink]="menuItems[5].path">Ingrédients</a>
@@ -55,33 +42,7 @@
       <a class="dropdown-item" [routerLink]="menuItems[8].path">Categorie</a>
     </mat-expansion-panel>
 
-    <mat-expansion-panel (opened)="panelOpenState = true"
-                         (closed)="panelOpenState = false"
-                         class="bg-blue-panel">
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          <mat-icon style="vertical-align: middle">public</mat-icon> &nbsp;
-          marketing
-        </mat-panel-title>
-      </mat-expansion-panel-header>
-      <a class="dropdown-item" [routerLink]="menuItems[12].path">gérer les réductions</a>
-      <a class="dropdown-item" [routerLink]="menuItems[14].path">gestion des combots</a>
-      <a class="dropdown-item" [routerLink]="menuItems[15].path">statistiques</a>
-    </mat-expansion-panel>
 
-    <mat-expansion-panel (opened)="panelOpenState = true"
-                         (closed)="panelOpenState = false"
-                         class="bg-blue-panel">
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          <mat-icon style="vertical-align: middle">settings</mat-icon> &nbsp;
-          Parametrage
-        </mat-panel-title>
-      </mat-expansion-panel-header>
-      <a class="dropdown-item" [routerLink]="menuItems[9].path">coordonnés du restaurant</a>
-      <a class="dropdown-item" [routerLink]="menuItems[13].path">Planning et services</a>
-      <a class="dropdown-item" [routerLink]="menuItems[16].path">configuration imprimante</a>
-      <a class="dropdown-item" [routerLink]="menuItems[10].path" [hidden]="!msdigitalTest">gestion des restaurants</a>
-    </mat-expansion-panel>
+
   </mat-accordion>
 </div>

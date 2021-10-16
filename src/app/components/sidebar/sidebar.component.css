@@ -6,7 +6,6 @@ a {
 mat-expansion-panel-header {
   background-color: rgb(92 141 216);
 }
-
 mat-panel-title {
   color: white;
 }
@@ -30,3 +29,7 @@ background: rgb(121 151 196);
 sidebar{
   background: #fcfcfc !important;
 }
+.icon-cmd{
+  width: 100%;text-align: center;font-size: 5em
+}
+.dropdown-item{padding: 0!important;}

@@ -20,6 +20,7 @@ import { StatisticsComponent } from './statistics/statistics.component';
 import {ChartsModule} from 'ng2-charts';
 import { PrinterConfigComponent } from './printer-config/printer-config.component';
 import { AllTicketsComponent } from './all-tickets/all-tickets.component';
+import {IonicModule} from '@ionic/angular';
 
 @NgModule({
     imports: [
@@ -30,7 +31,8 @@ import { AllTicketsComponent } from './all-tickets/all-tickets.component';
         MaterialModule,
         FormsModule,
         ReactiveFormsModule,
-        ChartsModule
+        ChartsModule,
+        IonicModule
     ],
   declarations: [
     FooterComponent,

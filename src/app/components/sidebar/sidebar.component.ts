@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {UserService} from '../../Services/UserService/user.service';
 import {CookieService} from 'ngx-cookie-service';
+import {MenuController} from '@ionic/angular';
 
 declare interface RouteInfo {
     path: string;
