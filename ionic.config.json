@@ -1,10 +1,11 @@
-
 {
   "defaultProject": "now-ui-dashboard-angular",
   "projects": {
     "now-ui-dashboard-angular": {
       "name": "now-ui-dashboard-angular",
-      "integrations": {},
+      "integrations": {
+        "cordova": {}
+      },
       "type": "angular"
     }
   }
