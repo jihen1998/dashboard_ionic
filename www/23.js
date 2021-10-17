@@ -10,9 +10,9 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_progress_bar", function() { return ProgressBar; });
-/* harmony import */ var _home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/defineProperty */ "rePB");
-/* harmony import */ var _home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck */ "1OyB");
-/* harmony import */ var _home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass */ "vuIU");
+/* harmony import */ var D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/defineProperty */ "rePB");
+/* harmony import */ var D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck */ "1OyB");
+/* harmony import */ var D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass */ "vuIU");
 /* harmony import */ var _index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./index-7a8b7a1c.js */ "wEJo");
 /* harmony import */ var _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ionic-global-63a97a32.js */ "E/Mt");
 /* harmony import */ var _helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./helpers-dd7e4b7b.js */ "1vRN");
@@ -29,7 +29,7 @@ var progressBarMdCss = ":host{--background:rgba(var(--ion-color-primary-rgb, 56,
 
 var ProgressBar = /*#__PURE__*/function () {
   function ProgressBar(hostRef) {
-    Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, ProgressBar);
+    Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, ProgressBar);
 
     Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_3__["r"])(this, hostRef);
     /**
@@ -58,7 +58,7 @@ var ProgressBar = /*#__PURE__*/function () {
     this.buffer = 1;
   }
 
-  Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(ProgressBar, [{
+  Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(ProgressBar, [{
     key: "render",
     value: function render() {
       var _createColorClasses;
@@ -75,7 +75,7 @@ var ProgressBar = /*#__PURE__*/function () {
         "aria-valuenow": type === 'determinate' ? value : null,
         "aria-valuemin": "0",
         "aria-valuemax": "1",
-        class: Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_6__["c"])(color, (_createColorClasses = {}, Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_createColorClasses, mode, true), Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_createColorClasses, "progress-bar-".concat(type), true), Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_createColorClasses, 'progress-paused', paused), Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_createColorClasses, 'progress-bar-reversed', document.dir === 'rtl' ? !reversed : reversed), _createColorClasses))
+        class: Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_6__["c"])(color, (_createColorClasses = {}, Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_createColorClasses, mode, true), Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_createColorClasses, "progress-bar-".concat(type), true), Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_createColorClasses, 'progress-paused', paused), Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_createColorClasses, 'progress-bar-reversed', document.dir === 'rtl' ? !reversed : reversed), _createColorClasses))
       }, type === 'indeterminate' ? renderIndeterminate() : renderProgress(value, buffer));
     }
   }]);

@@ -12,12 +12,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_item_option", function() { return ItemOption; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_item_options", function() { return ItemOptions; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_item_sliding", function() { return ItemSliding; });
-/* harmony import */ var _home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ "o0o1");
-/* harmony import */ var _home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "HaE+");
-/* harmony import */ var _home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/defineProperty */ "rePB");
-/* harmony import */ var _home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck */ "1OyB");
-/* harmony import */ var _home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass */ "vuIU");
+/* harmony import */ var D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ "o0o1");
+/* harmony import */ var D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "HaE+");
+/* harmony import */ var D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/defineProperty */ "rePB");
+/* harmony import */ var D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck */ "1OyB");
+/* harmony import */ var D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass */ "vuIU");
 /* harmony import */ var _index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./index-7a8b7a1c.js */ "wEJo");
 /* harmony import */ var _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ionic-global-63a97a32.js */ "E/Mt");
 /* harmony import */ var _theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./theme-ff3fc52f.js */ "74mu");
@@ -36,7 +36,7 @@ var itemOptionMdCss = ":host{--background:var(--ion-color-primary, #3880ff);--co
 
 var ItemOption = /*#__PURE__*/function () {
   function ItemOption(hostRef) {
-    Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_3__["default"])(this, ItemOption);
+    Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_3__["default"])(this, ItemOption);
 
     Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_5__["r"])(this, hostRef);
     /**
@@ -64,7 +64,7 @@ var ItemOption = /*#__PURE__*/function () {
     };
   }
 
-  Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_4__["default"])(ItemOption, [{
+  Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_4__["default"])(ItemOption, [{
     key: "render",
     value: function render() {
       var _createColorClasses;
@@ -83,7 +83,7 @@ var ItemOption = /*#__PURE__*/function () {
       };
       return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_5__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_5__["H"], {
         onClick: this.onClick,
-        class: Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_7__["c"])(this.color, (_createColorClasses = {}, Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(_createColorClasses, mode, true), Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(_createColorClasses, 'item-option-disabled', disabled), Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(_createColorClasses, 'item-option-expandable', expandable), Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(_createColorClasses, 'ion-activatable', true), _createColorClasses))
+        class: Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_7__["c"])(this.color, (_createColorClasses = {}, Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(_createColorClasses, mode, true), Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(_createColorClasses, 'item-option-disabled', disabled), Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(_createColorClasses, 'item-option-expandable', expandable), Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(_createColorClasses, 'ion-activatable', true), _createColorClasses))
       }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_5__["h"])(TagType, Object.assign({}, attrs, {
         class: "button-native",
         part: "native",
@@ -123,7 +123,7 @@ var itemOptionsMdCss = "ion-item-options{top:0;right:0;-ms-flex-pack:end;justify
 
 var ItemOptions = /*#__PURE__*/function () {
   function ItemOptions(hostRef) {
-    Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_3__["default"])(this, ItemOptions);
+    Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_3__["default"])(this, ItemOptions);
 
     Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_5__["r"])(this, hostRef);
     this.ionSwipe = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_5__["e"])(this, "ionSwipe", 7);
@@ -137,11 +137,11 @@ var ItemOptions = /*#__PURE__*/function () {
   /** @internal */
 
 
-  Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_4__["default"])(ItemOptions, [{
+  Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_4__["default"])(ItemOptions, [{
     key: "fireSwipeEvent",
     value: function () {
-      var _fireSwipeEvent = Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])( /*#__PURE__*/_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-        return _home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+      var _fireSwipeEvent = Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])( /*#__PURE__*/D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+        return D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
@@ -171,7 +171,7 @@ var ItemOptions = /*#__PURE__*/function () {
       var mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_6__["b"])(this);
       var isEnd = Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_8__["m"])(this.side);
       return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_5__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_5__["H"], {
-        class: (_class = {}, Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(_class, mode, true), Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(_class, "item-options-".concat(mode), true), Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(_class, 'item-options-start', !isEnd), Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(_class, 'item-options-end', isEnd), _class)
+        class: (_class = {}, Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(_class, mode, true), Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(_class, "item-options-".concat(mode), true), Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(_class, 'item-options-start', !isEnd), Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(_class, 'item-options-end', isEnd), _class)
       });
     }
   }, {
@@ -195,7 +195,7 @@ var openSlidingItem;
 
 var ItemSliding = /*#__PURE__*/function () {
   function ItemSliding(hostRef) {
-    Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_3__["default"])(this, ItemSliding);
+    Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_3__["default"])(this, ItemSliding);
 
     Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_5__["r"])(this, hostRef);
     this.ionDrag = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_5__["e"])(this, "ionDrag", 7);
@@ -220,7 +220,7 @@ var ItemSliding = /*#__PURE__*/function () {
     this.disabled = false;
   }
 
-  Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_4__["default"])(ItemSliding, [{
+  Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_4__["default"])(ItemSliding, [{
     key: "disabledChanged",
     value: function disabledChanged() {
       if (this.gesture) {
@@ -230,10 +230,10 @@ var ItemSliding = /*#__PURE__*/function () {
   }, {
     key: "connectedCallback",
     value: function () {
-      var _connectedCallback = Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])( /*#__PURE__*/_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
+      var _connectedCallback = Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])( /*#__PURE__*/D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
         var _this = this;
 
-        return _home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
+        return D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
@@ -327,11 +327,11 @@ var ItemSliding = /*#__PURE__*/function () {
   }, {
     key: "open",
     value: function () {
-      var _open = Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])( /*#__PURE__*/_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3(side) {
+      var _open = Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])( /*#__PURE__*/D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3(side) {
         var _this2 = this;
 
         var optionsToOpen, isStartOpen, isEndOpen;
-        return _home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee3$(_context3) {
+        return D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee3$(_context3) {
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
@@ -426,8 +426,8 @@ var ItemSliding = /*#__PURE__*/function () {
   }, {
     key: "close",
     value: function () {
-      var _close = Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])( /*#__PURE__*/_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee4() {
-        return _home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee4$(_context4) {
+      var _close = Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])( /*#__PURE__*/D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee4() {
+        return D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee4$(_context4) {
           while (1) {
             switch (_context4.prev = _context4.next) {
               case 0:
@@ -454,8 +454,8 @@ var ItemSliding = /*#__PURE__*/function () {
   }, {
     key: "closeOpened",
     value: function () {
-      var _closeOpened = Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])( /*#__PURE__*/_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee5() {
-        return _home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee5$(_context5) {
+      var _closeOpened = Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])( /*#__PURE__*/D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee5() {
+        return D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee5$(_context5) {
           while (1) {
             switch (_context5.prev = _context5.next) {
               case 0:
@@ -506,9 +506,9 @@ var ItemSliding = /*#__PURE__*/function () {
   }, {
     key: "updateOptions",
     value: function () {
-      var _updateOptions = Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])( /*#__PURE__*/_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee6() {
+      var _updateOptions = Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])( /*#__PURE__*/D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee6() {
         var options, sides, i, item, option, side;
-        return _home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee6$(_context6) {
+        return D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee6$(_context6) {
           while (1) {
             switch (_context6.prev = _context6.next) {
               case 0:
@@ -847,15 +847,15 @@ var ItemSliding = /*#__PURE__*/function () {
 
       var mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_6__["b"])(this);
       return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_5__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_5__["H"], {
-        class: (_class2 = {}, Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(_class2, mode, true), Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(_class2, 'item-sliding-active-slide', this.state !== 2
+        class: (_class2 = {}, Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(_class2, mode, true), Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(_class2, 'item-sliding-active-slide', this.state !== 2
         /* Disabled */
-        ), Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(_class2, 'item-sliding-active-options-end', (this.state & 8
+        ), Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(_class2, 'item-sliding-active-options-end', (this.state & 8
         /* End */
-        ) !== 0), Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(_class2, 'item-sliding-active-options-start', (this.state & 16
+        ) !== 0), Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(_class2, 'item-sliding-active-options-start', (this.state & 16
         /* Start */
-        ) !== 0), Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(_class2, 'item-sliding-active-swipe-end', (this.state & 32
+        ) !== 0), Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(_class2, 'item-sliding-active-swipe-end', (this.state & 32
         /* SwipeEnd */
-        ) !== 0), Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(_class2, 'item-sliding-active-swipe-start', (this.state & 64
+        ) !== 0), Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(_class2, 'item-sliding-active-swipe-start', (this.state & 64
         /* SwipeStart */
         ) !== 0), _class2)
       });

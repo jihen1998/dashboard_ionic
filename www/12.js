@@ -12,12 +12,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_fab", function() { return Fab; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_fab_button", function() { return FabButton; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_fab_list", function() { return FabList; });
-/* harmony import */ var _home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/defineProperty */ "rePB");
-/* harmony import */ var _home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ "o0o1");
-/* harmony import */ var _home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "HaE+");
-/* harmony import */ var _home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck */ "1OyB");
-/* harmony import */ var _home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass */ "vuIU");
+/* harmony import */ var D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/defineProperty */ "rePB");
+/* harmony import */ var D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ "o0o1");
+/* harmony import */ var D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "HaE+");
+/* harmony import */ var D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck */ "1OyB");
+/* harmony import */ var D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass */ "vuIU");
 /* harmony import */ var _index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./index-7a8b7a1c.js */ "wEJo");
 /* harmony import */ var _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ionic-global-63a97a32.js */ "E/Mt");
 /* harmony import */ var _theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./theme-ff3fc52f.js */ "74mu");
@@ -35,7 +35,7 @@ var Fab = /*#__PURE__*/function () {
   function Fab(hostRef) {
     var _this = this;
 
-    Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_3__["default"])(this, Fab);
+    Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_3__["default"])(this, Fab);
 
     Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_5__["r"])(this, hostRef);
     /**
@@ -65,7 +65,7 @@ var Fab = /*#__PURE__*/function () {
     };
   }
 
-  Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_4__["default"])(Fab, [{
+  Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_4__["default"])(Fab, [{
     key: "activatedChanged",
     value: function activatedChanged() {
       var activated = this.activated;
@@ -93,8 +93,8 @@ var Fab = /*#__PURE__*/function () {
   }, {
     key: "close",
     value: function () {
-      var _close = Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
-        return _home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
+      var _close = Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
+        return D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
@@ -130,7 +130,7 @@ var Fab = /*#__PURE__*/function () {
       var mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_6__["b"])(this);
       return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_5__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_5__["H"], {
         onClick: this.onClick,
-        class: (_class = {}, Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_class, mode, true), Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_class, "fab-horizontal-".concat(horizontal), horizontal !== undefined), Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_class, "fab-vertical-".concat(vertical), vertical !== undefined), Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_class, 'fab-edge', edge), _class)
+        class: (_class = {}, Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_class, mode, true), Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_class, "fab-horizontal-".concat(horizontal), horizontal !== undefined), Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_class, "fab-vertical-".concat(vertical), vertical !== undefined), Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_class, 'fab-edge', edge), _class)
       }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_5__["h"])("slot", null));
     }
   }, {
@@ -158,7 +158,7 @@ var FabButton = /*#__PURE__*/function () {
   function FabButton(hostRef) {
     var _this2 = this;
 
-    Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_3__["default"])(this, FabButton);
+    Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_3__["default"])(this, FabButton);
 
     Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_5__["r"])(this, hostRef);
     this.ionFocus = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_5__["e"])(this, "ionFocus", 7);
@@ -213,7 +213,7 @@ var FabButton = /*#__PURE__*/function () {
     };
   }
 
-  Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_4__["default"])(FabButton, [{
+  Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_4__["default"])(FabButton, [{
     key: "render",
     value: function render() {
       var _createColorClasses,
@@ -240,7 +240,7 @@ var FabButton = /*#__PURE__*/function () {
       };
       return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_5__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_5__["H"], {
         "aria-disabled": disabled ? 'true' : null,
-        class: Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_7__["c"])(color, (_createColorClasses = {}, Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_createColorClasses, mode, true), Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_createColorClasses, 'fab-button-in-list', inList), Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_createColorClasses, 'fab-button-translucent-in-list', inList && translucent), Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_createColorClasses, 'fab-button-close-active', activated), Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_createColorClasses, 'fab-button-show', show), Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_createColorClasses, 'fab-button-disabled', disabled), Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_createColorClasses, 'fab-button-translucent', translucent), Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_createColorClasses, 'ion-activatable', true), Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_createColorClasses, 'ion-focusable', true), Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_createColorClasses, "fab-button-".concat(size), size !== undefined), _createColorClasses))
+        class: Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_7__["c"])(color, (_createColorClasses = {}, Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_createColorClasses, mode, true), Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_createColorClasses, 'fab-button-in-list', inList), Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_createColorClasses, 'fab-button-translucent-in-list', inList && translucent), Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_createColorClasses, 'fab-button-close-active', activated), Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_createColorClasses, 'fab-button-show', show), Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_createColorClasses, 'fab-button-disabled', disabled), Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_createColorClasses, 'fab-button-translucent', translucent), Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_createColorClasses, 'ion-activatable', true), Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_createColorClasses, 'ion-focusable', true), Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_createColorClasses, "fab-button-".concat(size), size !== undefined), _createColorClasses))
       }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_5__["h"])(TagType, Object.assign({}, attrs, {
         class: "button-native",
         part: "native",
@@ -277,7 +277,7 @@ var fabListCss = ":host{margin-left:0;margin-right:0;margin-top:66px;margin-bott
 
 var FabList = /*#__PURE__*/function () {
   function FabList(hostRef) {
-    Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_3__["default"])(this, FabList);
+    Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_3__["default"])(this, FabList);
 
     Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_5__["r"])(this, hostRef);
     /**
@@ -292,7 +292,7 @@ var FabList = /*#__PURE__*/function () {
     this.side = 'bottom';
   }
 
-  Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_4__["default"])(FabList, [{
+  Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_4__["default"])(FabList, [{
     key: "activatedChanged",
     value: function activatedChanged(activated) {
       var fabs = Array.from(this.el.querySelectorAll('ion-fab-button')); // if showing the fabs add a timeout, else show immediately
@@ -311,7 +311,7 @@ var FabList = /*#__PURE__*/function () {
 
       var mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_6__["b"])(this);
       return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_5__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_5__["H"], {
-        class: (_class2 = {}, Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_class2, mode, true), Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_class2, 'fab-list-active', this.activated), Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_class2, "fab-list-side-".concat(this.side), true), _class2)
+        class: (_class2 = {}, Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_class2, mode, true), Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_class2, 'fab-list-active', this.activated), Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_class2, "fab-list-side-".concat(this.side), true), _class2)
       }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_5__["h"])("slot", null));
     }
   }, {

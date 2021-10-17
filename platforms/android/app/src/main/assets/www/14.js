@@ -11,12 +11,12 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_infinite_scroll", function() { return InfiniteScroll; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_infinite_scroll_content", function() { return InfiniteScrollContent; });
-/* harmony import */ var _home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/defineProperty */ "rePB");
-/* harmony import */ var _home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ "o0o1");
-/* harmony import */ var _home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "HaE+");
-/* harmony import */ var _home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck */ "1OyB");
-/* harmony import */ var _home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass */ "vuIU");
+/* harmony import */ var D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/defineProperty */ "rePB");
+/* harmony import */ var D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ "o0o1");
+/* harmony import */ var D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "HaE+");
+/* harmony import */ var D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck */ "1OyB");
+/* harmony import */ var D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass */ "vuIU");
 /* harmony import */ var _index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./index-7a8b7a1c.js */ "wEJo");
 /* harmony import */ var _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ionic-global-63a97a32.js */ "E/Mt");
 /* harmony import */ var _index_9e3fe806_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./index-9e3fe806.js */ "39oe");
@@ -34,7 +34,7 @@ var InfiniteScroll = /*#__PURE__*/function () {
   function InfiniteScroll(hostRef) {
     var _this = this;
 
-    Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_3__["default"])(this, InfiniteScroll);
+    Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_3__["default"])(this, InfiniteScroll);
 
     Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_5__["r"])(this, hostRef);
     this.ionInfinite = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_5__["e"])(this, "ionInfinite", 7);
@@ -109,7 +109,7 @@ var InfiniteScroll = /*#__PURE__*/function () {
     };
   }
 
-  Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_4__["default"])(InfiniteScroll, [{
+  Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_4__["default"])(InfiniteScroll, [{
     key: "thresholdChanged",
     value: function thresholdChanged() {
       var val = this.threshold;
@@ -137,11 +137,11 @@ var InfiniteScroll = /*#__PURE__*/function () {
   }, {
     key: "connectedCallback",
     value: function () {
-      var _connectedCallback = Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
+      var _connectedCallback = Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
         var _this2 = this;
 
         var contentEl;
-        return _home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
+        return D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
@@ -206,11 +206,11 @@ var InfiniteScroll = /*#__PURE__*/function () {
   }, {
     key: "complete",
     value: function () {
-      var _complete = Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2() {
+      var _complete = Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2() {
         var _this3 = this;
 
         var scrollEl, prev;
-        return _home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee2$(_context2) {
+        return D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
@@ -306,7 +306,7 @@ var InfiniteScroll = /*#__PURE__*/function () {
       var mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_6__["b"])(this);
       var disabled = this.disabled;
       return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_5__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_5__["H"], {
-        class: (_class = {}, Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_class, mode, true), Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_class, 'infinite-scroll-loading', this.isLoading), Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_class, 'infinite-scroll-enabled', !disabled), _class)
+        class: (_class = {}, Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_class, mode, true), Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_class, 'infinite-scroll-loading', this.isLoading), Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_class, 'infinite-scroll-enabled', !disabled), _class)
       });
     }
   }, {
@@ -333,12 +333,12 @@ var infiniteScrollContentMdCss = "ion-infinite-scroll-content{display:-ms-flexbo
 
 var InfiniteScrollContent = /*#__PURE__*/function () {
   function InfiniteScrollContent(hostRef) {
-    Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_3__["default"])(this, InfiniteScrollContent);
+    Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_3__["default"])(this, InfiniteScrollContent);
 
     Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_5__["r"])(this, hostRef);
   }
 
-  Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_4__["default"])(InfiniteScrollContent, [{
+  Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_4__["default"])(InfiniteScrollContent, [{
     key: "componentDidLoad",
     value: function componentDidLoad() {
       if (this.loadingSpinner === undefined) {
@@ -353,7 +353,7 @@ var InfiniteScrollContent = /*#__PURE__*/function () {
 
       var mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_6__["b"])(this);
       return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_5__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_5__["H"], {
-        class: (_class2 = {}, Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_class2, mode, true), Object(_home_jihen_Documents_GitHub_dashboard_ionic_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_class2, "infinite-scroll-content-".concat(mode), true), _class2)
+        class: (_class2 = {}, Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_class2, mode, true), Object(D_zizoe_Documents_ionic_github_restaurant_dashboard_main_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_class2, "infinite-scroll-content-".concat(mode), true), _class2)
       }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_5__["h"])("div", {
         class: "infinite-loading"
       }, this.loadingSpinner && Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_5__["h"])("div", {

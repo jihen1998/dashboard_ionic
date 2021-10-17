@@ -49,7 +49,7 @@ export class LoginFormComponent implements OnInit {
           this.cookie.set('costumer', 'costumer');
         }
       }
-      this.route.navigate(['dashboard']);
+      this.route.navigate(['commandes-en-atente']);
     }, error => {
       this.errorMessage = error.error.message;
       this.isLoginFailed = true;

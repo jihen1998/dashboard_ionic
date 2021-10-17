@@ -16,7 +16,7 @@ export class LoginGuardGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     if (this.cookie.get('jwtadmin')) {
-      return this.router.parseUrl('dashboard');
+      return this.router.parseUrl('commandes-en-atente');
     } else {
       return true;
     }

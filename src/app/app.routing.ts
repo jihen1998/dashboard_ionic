@@ -17,7 +17,7 @@ const routes: Routes = [
       path: '',
       loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule'
   }]},
-  {path: '**', redirectTo: 'dashboard', canActivate: [DashboardGuard]}
+  {path: '**', redirectTo: 'commandes-en-atente', canActivate: [DashboardGuard]}
 ];
 
 @NgModule({

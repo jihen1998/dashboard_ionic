@@ -2,7 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import {UserService} from '../../Services/UserService/user.service';
 import {CookieService} from 'ngx-cookie-service';
 import {MenuController} from '@ionic/angular';
-
+import { Router } from '@angular/router';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { ConfirmationBannerComponent } from '../confirmation-banner/confirmation-banner.component';
+import { AuthService } from 'src/app/Services/Auth/auth.service';
 declare interface RouteInfo {
     path: string;
     title: string;
@@ -37,8 +40,10 @@ export const ROUTES: RouteInfo[] = [
 export class SidebarComponent implements OnInit {
   menuItems: any[];
   panelOpenState = false;
-  msdigitalTest = false;
-  constructor(private us: UserService, private cookie: CookieService) { }
+  msdigitalTest = false; 
+  constructor(private us: UserService, private router: Router,
+     private auth: AuthService, private cookie: CookieService,
+     private dialog: MatDialog) { }
 
   ngOnInit() {
     this.menuItems = ROUTES.filter(menuItem => menuItem);
@@ -51,5 +56,20 @@ export class SidebarComponent implements OnInit {
           return false;
       }
       return true;
+  }
+  logout() {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.autoFocus = false;
+    dialogConfig.width = "15%";
+    dialogConfig.height = "20%";
+    const dialogref = this.dialog.open(ConfirmationBannerComponent, dialogConfig);
+    dialogref.afterClosed().subscribe((retour: boolean) => {
+      if (retour === true) {
+        this.auth.logout().subscribe(data => {
+          this.cookie.deleteAll();
+          this.router.navigate(['loginform']);
+        });
+      }
+    });
   }
 }
