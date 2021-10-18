@@ -1,52 +1,30 @@
-<div class="logo " >
-    <!--<a class="simple-text logo-mini">
-      <div class="logo-img">
-          <img src="./assets/img/angular2-logo-white.png"/>
-      </div>
-    </a>-->
-  <div style="display: flex; justify-content: center; height: 30px;">
-    <img src="../../../assets/img/maria cantina logo.png" style=" position: absolute; top:0px;" width="100"/>
-  </div>
-    <a class="simple-text logo-normal"></a>
-</div>
-<div class="sidebar-wrapper bg-blue" >
+<div class="sidebar-wrapper bg-blue" style="padding-top: 3em">
   <mat-accordion>
+    <div *ngFor="let item of menuItems;let index=index">
+      <mat-expansion-panel hideToggle disabled style="margin-top: 10%" *ngIf="index_menu.includes(index,0)==true">
+        <mat-expansion-panel-header style="height:6em;background-color: rgb(121 151 196)">
+          <mat-panel-title>
+            <a class="dropdown-item" [routerLink]="item.path">
+              <mat-icon class="icon-cmd">{{item.icon}}</mat-icon>
+            </a>
 
-    <mat-expansion-panel (opened)="panelOpenState = true"
-                         (closed)="panelOpenState = false"
-                         class="bg-blue-panel">
-      <mat-expansion-panel-header>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+      </mat-expansion-panel>
+    </div>
+
+    <mat-expansion-panel (opened)="panelOpenState = true" class="sidebar-footer"
+                         (closed)="panelOpenState = false" hideToggle disabled >
+      <mat-expansion-panel-header style="background-color: rgb(121 151 196)">
         <mat-panel-title>
-          <mat-icon  style="vertical-align: middle">receipt</mat-icon>
+          <a class="nav-link" (click)="logout()" style=" cursor: pointer">
+            <p>
+              <mat-icon style="vertical-align: middle;bottom:0">exit_to_app</mat-icon>
+              se déconnecter
+            </p>
+          </a>
         </mat-panel-title>
       </mat-expansion-panel-header>
-      <div class="bg-blue-panel" style="width: 100%">
-        <a class="dropdown-item " [routerLink]="menuItems[1].path"><mat-icon class="icon-cmd">notifications_active</mat-icon></a>
-        <a class="dropdown-item " [routerLink]="menuItems[2].path"><mat-icon class="icon-cmd" style="">slow_motion_video</mat-icon></a>
-        <a class="dropdown-item "  [routerLink]="menuItems[3].path"><mat-icon  class="icon-cmd">done_all</mat-icon></a> <!--commande de ce jour-->
-        <a class="dropdown-item " [routerLink]="menuItems[4].path"><mat-icon class="icon-cmd">archive</mat-icon></a> <!--historique de tt les commandes-->
-      </div>
     </mat-expansion-panel>
-
-    <mat-expansion-panel (opened)="panelOpenState = true"
-                         (closed)="panelOpenState = false"
-                         class="bg-blue-panel">
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          <mat-icon style="vertical-align: middle">shopping_basket</mat-icon> &nbsp;
-        </mat-panel-title>
-      </mat-expansion-panel-header>
-      <a class="dropdown-item" [routerLink]="menuItems[5].path">Ingrédients</a>
-      <a class="dropdown-item" [routerLink]="menuItems[6].path">Modificateurs</a>
-      <a class="dropdown-item" [routerLink]="menuItems[7].path">Plats</a>
-      <a class="dropdown-item" [routerLink]="menuItems[8].path">Categorie</a>
-    </mat-expansion-panel>
-    <mat-expansion-panel (opened)="panelOpenState = true"
-    (closed)="panelOpenState = false"
-    class="bg-blue-panel">
-    <a class="nav-link" (click)="logout()" style=" cursor: pointer" >
-      <p> <mat-icon style="vertical-align: middle;">exit_to_app</mat-icon> se déconnecter </p>
-    </a>
-</mat-expansion-panel>
   </mat-accordion>
 </div>

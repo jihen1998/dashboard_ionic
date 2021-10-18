@@ -1,11 +1,21 @@
 <div class="wrapper">
-  <div class="col-lg-12">
-    <div class="sidebar col-lg-2" data-color="red" style="width: 10em">
-        <app-sidebar></app-sidebar>
-    </div>
-    <div class="main-panel col-lg-10" style="width: 100%;padding-left: 5%">
-        <router-outlet></router-outlet>
-        <app-footer></app-footer>
-    </div>
+  <div class="sidebar" data-color="red">
+    <app-sidebar></app-sidebar>
   </div>
-</div>
+  <nav class="navbar navbar-expand-lg navbar-absolute fixed-top bg-blue" style="z-index: 99999">
+    <div class="container-fluid">
+      <div class="navbar-wrapper">
+        <div class="navbar-toggle">
+          <button type="button" class="navbar-toggler" (click)="sidebarToggle()">
+            <span class="navbar-toggler-bar bar1"></span>
+            <span class="navbar-toggler-bar bar2"></span>
+            <span class="navbar-toggler-bar bar3"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="main-panel">
+    <router-outlet></router-outlet>
+    <app-footer></app-footer></div>
+  </div>

@@ -5,7 +5,7 @@ import {MenuController} from '@ionic/angular';
 import { Router } from '@angular/router';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { ConfirmationBannerComponent } from '../confirmation-banner/confirmation-banner.component';
-import { AuthService } from 'src/app/Services/Auth/auth.service';
+import {AuthService} from '../../Services/Auth/auth.service';
 declare interface RouteInfo {
     path: string;
     title: string;
@@ -14,10 +14,10 @@ declare interface RouteInfo {
 }
 export const ROUTES: RouteInfo[] = [
     { path: '/dashboard', title: 'Tableau de bord',  icon: 'design_app', class: '' },
-    { path: '/commandes-en-atente', title: 'commandes en attente',  icon: 'education_atom', class: '' },
-    { path: '/commandes-en-cours', title: 'commandes en cours',  icon: 'location_map-big', class: '' },
-    { path: '/commandes-termine', title: 'commandes termine',  icon: 'ui-1_bell-53', class: '' },
-    { path: '/commandes-archive', title: 'commandes archive',  icon: 'users_single-02', class: '' },
+    { path: '/commandes-en-atente', title: 'commandes en attente',  icon: 'notifications_active', class: '' },
+    { path: '/commandes-en-cours', title: 'commandes en cours',  icon: 'slow_motion_video', class: '' },
+    { path: '/commandes-termine', title: 'commandes termine',  icon: 'done_all', class: '' },
+    { path: '/commandes-archive', title: 'commandes archive',  icon: 'archive', class: '' },
     { path: '/ingredient', title: 'ingredient',  icon: 'design_bullet-list-67', class: '' },
     { path: '/modificateur', title: 'modificateur',  icon: 'text_caps-small', class: '' },
     { path: '/plat', title: 'plat',  icon: 'objects_spaceship', class: 'active active-pro' },
@@ -40,11 +40,15 @@ export const ROUTES: RouteInfo[] = [
 export class SidebarComponent implements OnInit {
   menuItems: any[];
   panelOpenState = false;
-  msdigitalTest = false; 
+  msdigitalTest = false;
+  mobile_menu_visible: any = 0;
+  private toggleButton: any;
+  private sidebarVisible: boolean;
+
   constructor(private us: UserService, private router: Router,
      private auth: AuthService, private cookie: CookieService,
-     private dialog: MatDialog) { }
-
+     private dialog: MatDialog) {    }
+  index_menu=[1,2,3,4,5,6,7,8];
   ngOnInit() {
     this.menuItems = ROUTES.filter(menuItem => menuItem);
     if (this.cookie.get('msdigital')) {
@@ -72,4 +76,6 @@ export class SidebarComponent implements OnInit {
       }
     });
   }
+
+
 }

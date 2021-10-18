@@ -30,6 +30,13 @@ sidebar{
   background: #fcfcfc !important;
 }
 .icon-cmd{
-  width: 100%;text-align: center;font-size: 5em
+  width: 100%;text-align: center;font-size: 6em
 }
 .dropdown-item{padding: 0!important;}
+.sidebar-footer{
+  height: 50px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  list-style-type: none;
+}
